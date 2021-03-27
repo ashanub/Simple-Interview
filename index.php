@@ -11,6 +11,7 @@ $user_test_completion_status = get_option($test_status_option_name);
 //@TODO REMOVE THIS LINE
 //update_option($test_status_option_name, '');
 
+//unset($_SESSION['time_limit']);
 ?>
 <!doctype html>
 <html lang="en">
@@ -344,6 +345,9 @@ if ($user_test_completion_status !== 'completed') {
           }
           if (response === '05:00') {
             timeTag.classList.add('is-danger')
+          }
+          if (response === '00:01') {
+            submitForm()
           }
           updateTimerDisplay(response)
         })
