@@ -1,0 +1,74 @@
+/*
+Theme Name:Interview
+Author: Ashan Boralugoda (Tropusi
+ */
+//Vars
+$bg-Blue: #3D405B;
+$orange: #E07A5F;
+$cream: #F4F1DE;
+$mint: #81B29A;
+$yellow: #F2CC8F;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-Blue;
+
+  .body-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-wrapper {
+      form {
+        .card {
+          height: 500px;
+          background-color: $cream;
+
+          .form-section {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .card-content {
+
+              textarea {
+                height: 100%;
+              }
+
+            }
+
+            .card-footer {
+              display: flex;
+              justify-content: space-between;
+              background-color: $mint;
+
+              .button {
+                background-color: $orange;
+
+                &:only-child {
+                  align-self: flex-end;
+                  margin-left: auto;
+                }
+              }
+
+              .previous-question-button {
+                background-color: $yellow;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #timer {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
